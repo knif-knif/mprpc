@@ -24,4 +24,5 @@ private:
     std::unordered_map<std::string, ServiceInfo> m_serviceMap;
     void OnConnection(const muduo::net::TcpConnectionPtr& conn);
     void OnMessage(const muduo::net::TcpConnectionPtr&, muduo::net::Buffer*, muduo::Timestamp);
+    void SendRpcResponse(const muduo::net::TcpConnectionPtr&, google::protobuf::Message*);
 };

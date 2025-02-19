@@ -1,4 +1,5 @@
-aux_source_directory(. SRC_LIST)
+#aux_source_directory(. SRC_LIST)
+set(SRC_LIST rpcapp.cc rpcconfig.cc rpcheader.pb.cc rpcprovider.cc rpcchannel.cc rpccontroller.cc logger.cc)
 
 add_library(mprpc ${SRC_LIST})
 
