@@ -29,17 +29,17 @@ private:
         Logger &logger = Logger::GetInstance();         \
         logger.SetLogLevel(INFO);                       \
         char c[1024] = {0};                             \
-        snprinf(c, 1024, logmsgformat, ##__VA_ARGS__);  \
-        logger.Log(c);                                  \        
-    } while ({0});
+        snprintf(c, 1024, logmsgformat, ##__VA_ARGS__); \
+        logger.Log(c);                                  \
+    } while (0);
 
 #define LOG_ERR(logmsgformat, ...)                      \
     do                                                  \
     {                                                   \
         Logger &logger = Logger::GetInstance();         \
-        logger.SetLogLevel(ERROR);                       \
+        logger.SetLogLevel(ERROR);                      \
         char c[1024] = {0};                             \
-        snprinf(c, 1024, logmsgformat, ##__VA_ARGS__);  \
-        logger.Log(c);                                  \        
-    } while ({0});
+        snprintf(c, 1024, logmsgformat, ##__VA_ARGS__); \
+        logger.Log(c);                                  \
+    } while (0);
 

@@ -2,6 +2,7 @@
 #include <string>
 #include "rpcapp.h"
 #include "rpcprovider.h"
+#include "logger.h"
 #include "friend.pb.h"
 #include <vector>
 
@@ -35,6 +36,8 @@ public:
 };
 
 int main(int argc, char** argv) {
+    LOG_INFO("first log message!");
+    LOG_ERR("%s:%s:%d", __FILE__, __FUNCTION__, __LINE__);
     RpcApp::Init(argc, argv);
     RpcProvider provider;
     provider.NotifyService(new FriendService());

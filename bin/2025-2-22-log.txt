@@ -1,0 +1,2 @@
+17:54:28 => first log message!17:54:28 => /home/ubuntu/projects/mprpc/example/callee/friend_service.cc:main:4017:56:17 => first log message!
+17:56:17 => /home/ubuntu/projects/mprpc/example/callee/friend_service.cc:main:40
